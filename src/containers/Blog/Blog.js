@@ -20,7 +20,7 @@ class Blog extends Component {
                     ...post,
                     author: 'Ansari'
                 }
-            })
+            });
            this.setState({posts : updatedPosts});
         });
     }
@@ -33,7 +33,7 @@ class Blog extends Component {
             return  <Post key={post.id}
                           title={post.title}
                           author={post.author}
-                          clicked={()=> this.postSelectedHandler}  />;
+                          clicked={()=> this.postSelectedHandler(post.id)}  />;
         });
 
         return (
